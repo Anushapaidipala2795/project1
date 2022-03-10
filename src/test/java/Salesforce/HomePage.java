@@ -42,6 +42,11 @@ public class HomePage extends Base  {
 		System.out.println("successfully implemented in master ranch");
 
 		System.out.println("final merging from alpha");
+		System.out.println("1");
+		System.out.println("2");
+		System.out.println("3");
+		System.out.println("4");
+		
 
 
 //        Loginpagetest lp1=new Loginpagetest(driver);
