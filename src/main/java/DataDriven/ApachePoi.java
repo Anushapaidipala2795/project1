@@ -29,7 +29,7 @@ public	WebDriver driver;
 		FileInputStream fis=new FileInputStream("D:\\salesforce\\Excel1.xlsx");
 		XSSFWorkbook book=new XSSFWorkbook(fis);
 		int sheets=book.getNumberOfSheets();
-		String value1=null;
+		String value = null;
 		for(int i=0;i<sheets;i++)
 		{
 			String SheetName=book.getSheetAt(i).getSheetName();
@@ -38,21 +38,18 @@ public	WebDriver driver;
 				XSSFSheet sheet=book.getSheetAt(i);
 				Iterator<Row> rows=sheet.rowIterator();
 				
-				if(rows.next().getCell(i).getStringCellValue().equalsIgnoreCase("Harish"))
+				while(rows.hasNext())
 				{
-				
 					Iterator<Cell> cells=rows.next().cellIterator();
 					
-					if(cells.next().getStringCellValue().equalsIgnoreCase("chn"))
-					{
-						String value=cells.next().getStringCellValue();	
-						value1=value;
-				
-			}
+				if(cells.next().getStringCellValue().equalsIgnoreCase("harish"))
+				{
+					 value=cells.next().getStringCellValue();
+				}
 			
 			}
 		}
 	}
-		return value1;
+	return value;	
 	}
 }
