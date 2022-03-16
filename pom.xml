@@ -29,6 +29,7 @@
            
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
+						 <goalPrefix>C</goalPrefix>
 						<suiteXmlFile>testng.xml</suiteXmlFile>
 					</suiteXmlFiles>
 				</configuration>
